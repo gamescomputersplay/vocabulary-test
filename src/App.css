@@ -1,0 +1,240 @@
+body {
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  padding: 0px;
+}
+
+p{
+  line-height: 22px;
+}
+
+.App {
+  text-align: center;
+}
+
+.loading {
+  margin: 30px auto 10px;
+}
+
+.question{
+  position: relative;
+  margin: 30px auto 10px;
+  padding: 20px;
+  max-width: 400px;
+  border: 1px solid #ddd;
+  background: linear-gradient(0deg, #fdfdfd 0%, #f0f0f0 100%);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 8px solid #ffffff;
+}
+
+
+.question:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.question-word{
+  font-size: 40px;
+  margin: 20px auto 20px;
+}
+
+.question-pos{
+  margin-top: 5px;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+
+.question-number{
+  position: absolute;
+  bottom:0;
+  right:0;
+  padding: 3px;
+  font-size: 10px;
+}
+
+.level-letter{
+  position: absolute;
+  bottom:0;
+  left:0;
+  padding: 3px;
+  line-height: 36px;
+  font-size: 50px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.letter-A1{ color: rgb(243, 215, 208); }
+.letter-A2{ color:rgb(248, 221, 198);; }
+.letter-B1{ color: rgb(247, 234, 202);; }
+.letter-B2{ color: rgb(197, 240, 235); }
+.letter-C1{ color: #b8dfee;; }
+.letter-C2{ color: #e6c7f5; }
+
+.question-button{
+  margin: 20px auto 10px;
+  font-size: 20px;
+  border: 0px;
+  padding: 12px;
+  width: 100px;
+  height: 60px;
+}
+
+
+.button-yes{
+  margin-right:20px;
+  background: linear-gradient(180deg, #b7ebc2 0%, #a2cfb1 100%);
+}
+.button-yes:hover {
+  background: linear-gradient(180deg, #a7dbb2 0%, #92bfa1 100%)
+}
+
+
+.button-no{
+  margin-left:20px;
+  background: linear-gradient(180deg, #fdb3a9 0%, #fdaeae 100%);
+}
+.button-no:hover{
+  background: linear-gradient(180deg, #eda399 0%, #ed9e9e 100%);
+}
+
+a{
+  text-decoration: none;
+}
+
+.heading {
+  width: 100%;
+  background: #f8f8f8;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #bbbbbb;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-family: 'Dosis', sans-serif;
+  font-size: 60px;
+  color: #2e2e2e;
+}
+.headingtest {
+  font-weight: 600;
+  color: #7619a1;
+}
+
+.button-again, .button-start{
+  margin: 20px auto 10px;
+  font-size: 20px;
+  border: 0px;
+  padding: 10px 30px;
+  background: linear-gradient(180deg, #b7ebc2 0%, #a2cfb1 100%);
+  display:block;
+}
+.button-again:hover, .button-start:hover{
+  background: linear-gradient(180deg, #a7dbb2 0%, #92bfa1 100%);
+}
+
+.diagram{
+  display: inline-block;
+}
+
+
+.diagram-column {
+  display: block;
+  float:left;
+  border: 1px solid #888;
+  border-bottom: 8px solid #ffffff;
+  background: #f0f0f0;
+  margin: 5px;
+  padding: 0px;
+  width: 120px;
+  height: 350px;
+}
+
+.diagram-bg-A1 { background:  rgb(243, 215, 208);}
+.diagram-bg-A2{ background:rgb(248, 221, 198);; }
+.diagram-bg-B1{ background: rgb(247, 234, 202);; }
+.diagram-bg-B2{ background: rgb(197, 240, 235); }
+.diagram-bg-C1{ background: #b8dfee;; }
+.diagram-bg-C2{ background: #e6c7f5; }
+
+.nowords{
+  background: #fff;
+}
+.diagram-column .diagram-level{
+  font-size:35px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+  background: #fff;
+}
+
+.diagram-column p {
+  margin: 0px;
+  padding:1px;
+}
+.diagram-column .unknown {
+  color: #a82e0f;
+  background: #fff;
+  padding-bottom: 4px;
+}
+
+.diagram-column .known {
+  color: #20b351;
+  padding-top: 4px;
+}
+
+
+
+.level-A1{  border-bottom-color: #E76F51;}
+.level-A2{  border-bottom-color: #F4A261;}
+.level-B1{  border-bottom-color: #E9C46A;}
+.level-B2{  border-bottom-color: rgb(100, 170, 162);}
+.level-C1{  border-bottom-color: #4d94b1;}
+.level-C2{  border-bottom-color: #a369be;}
+
+.cefr{
+  margin-bottom: 4px;
+}
+
+.cefrlink{
+  margin-top: 0px;
+  font-size: 12px;
+  color: #666;
+}
+
+.introtext{
+  width: 500px;
+  max-width: 90%;
+  margin: 20px auto;
+}
+
+.introtext p{
+  text-align: left;
+}
+
+.introtext p .green{
+  color: green;
+  font-weight: 800;
+}
+
+.introtext p .red{
+  color: red;
+  font-weight: 800;
+}
+
+@media (max-width: 800px) {
+  .diagram {
+      margin: 0 auto;
+      width: 400px;
+  }
+  .diagram-column {
+      width: 30%;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+      font-size: 40px;
+  }
+  .diagram {
+      min-width: 360px;
+  }
+  .diagram-column {
+      width: 30%;
+  }
+}
