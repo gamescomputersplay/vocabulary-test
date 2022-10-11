@@ -30,7 +30,7 @@ class Quiz extends React.Component {
 
     componentDidMount() {
 
-      const apiURL = "http://how-many-words-do-you-know.com/vocabapi/v1/"
+      const apiURL = "http://how-many-words-do-you-know.com/vocabapi/v1/random_vocab.php"
       
       if (useLocalData) {
         this.setState( 
