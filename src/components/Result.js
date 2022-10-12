@@ -14,7 +14,7 @@ class Result extends Component {
         
     levelMessage(levelNum){
         if ( levelNum === -1 ) {
-          return "lower then A1"
+          return "lower than A1"
         }
         return levels[levelNum]
       }
