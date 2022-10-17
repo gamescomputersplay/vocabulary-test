@@ -4,6 +4,10 @@ import Intro from './components/Intro'
 import Quiz from './components/Quiz'
 import Result from './components/Result'
 
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-X8KYYN54XQ");
+ReactGA.send("pageview");
 
 class App extends React.Component {
 

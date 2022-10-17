@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Diagram from './Diagram'
 import {levels} from '../Consts'
 
+import ReactGA from "react-ga4";
 
 class Result extends Component {
     constructor(props) {
@@ -26,6 +27,16 @@ class Result extends Component {
             ),
             1000
         )
+        ReactGA.event({
+            category: 'results',
+            action: 'level',
+            label: this.props.result
+          });
+          ReactGA.event({
+            category: 'results',
+            action: 'vocab',
+            label: this.props.vocabSize
+          });
     }
 
 
