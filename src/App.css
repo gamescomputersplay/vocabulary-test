@@ -50,6 +50,10 @@ p{
   font-size: 10px;
 }
 
+.question-definition{
+  display:none;
+}
+
 .level-letter{
   position: absolute;
   bottom:0;
@@ -178,6 +182,9 @@ a{
   padding-top: 4px;
 }
 
+.diagram-tooltip{
+  display: none;
+}
 
 
 .level-A1{  border-bottom-color: #E76F51;}

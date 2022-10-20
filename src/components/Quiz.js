@@ -51,13 +51,14 @@ class Quiz extends React.Component {
         word={word[0]} 
         pos={word[1]} 
         level={word[2]} 
+        definition={word[3]} 
         number={this.state.questionCounter}
         onClick = { this.handleClick }
         />
     }
    
 
-    handleClick(known, word){
+    handleClick(known, word, definition){
   
       var newLevel = 0
       var newQuestion = 0
@@ -69,13 +70,15 @@ class Quiz extends React.Component {
       var newResult = this.state.result
       var newVocabSize = 0
   
+      var word_with_definition = {word: word, definition: definition}
+
       if (known) {
         newKnown[this.state.currentLevel] += 1
-        newKnownWords[this.state.currentLevel].push(word)
+        newKnownWords[this.state.currentLevel].push(word_with_definition)
       }
       else {
         newUnknown[this.state.currentLevel] += 1
-        newUnKnownWords[this.state.currentLevel].push(word)
+        newUnKnownWords[this.state.currentLevel].push(word_with_definition)
 
       }
   
@@ -139,7 +142,7 @@ class Quiz extends React.Component {
         result: newResult,
         vocabSize: newVocabSize
       })
-      // console.log(this.state.knownWords)
+      console.log(this.state.knownWords)
       // console.log(this.state.unknownWords)
 
         // Update State upstream
