@@ -196,10 +196,6 @@ a{
   padding-top: 4px;
 }
 
-.diagram-tooltip{
-  display: none;
-}
-
 
 .level-A1{  border-bottom-color: #E76F51;}
 .level-A2{  border-bottom-color: #F4A261;}
@@ -266,15 +262,15 @@ mostly to make diagram fold into 2 rows of 3 columns */
 }
 
 /* Tooltips with definitions in the diagram */
-.unknown div, .known div{
+.unknown div.diagram-word, .known div.diagram-word{
 	position: relative;
 }
-.unknown div:hover .diagram-tooltip,
-	.known div:hover .diagram-tooltip{
+.unknown div.diagram-word:hover .diagram-tooltip,
+	.known div.diagram-word:hover .diagram-tooltip{
 	visibility: visible;
 }
 .diagram-tooltip{
-	display: block !important;
+	display: block;
 	visibility: hidden;
 	width: 250px;
 	background-color: #555;
@@ -282,7 +278,7 @@ mostly to make diagram fold into 2 rows of 3 columns */
 	text-align: center;
 	border-radius: 6px;
 	padding: 12px 20px;
-	position: absolute !important;
+	position: absolute;
 	z-index: 1;
 	bottom: 25px;
 	left: -72%;
