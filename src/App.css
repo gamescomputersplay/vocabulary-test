@@ -15,6 +15,8 @@ p{
   margin: 30px auto 10px;
 }
 
+
+/* Vocabulary cards */
 .question{
   position: relative;
   margin: 30px auto 10px;
@@ -50,6 +52,7 @@ p{
   font-size: 10px;
 }
 
+/* Definition (blurred until hovered) */
 .question-definition{
 	display:block !important;
 	color: #444;
@@ -64,6 +67,7 @@ p{
     -webkit-filter: none;
 }
 
+
 .level-letter{
   position: absolute;
   bottom:0;
@@ -75,6 +79,7 @@ p{
   color: #fff;
 }
 
+/* Color coded CEFR levels */
 .letter-A1{ color: rgb(243, 215, 208); }
 .letter-A2{ color:rgb(248, 221, 198);; }
 .letter-B1{ color: rgb(247, 234, 202);; }
@@ -91,7 +96,7 @@ p{
   height: 60px;
 }
 
-
+/* Yes and No buttons */
 .button-yes{
   margin-right:20px;
   background: linear-gradient(180deg, #b7ebc2 0%, #a2cfb1 100%);
@@ -99,7 +104,6 @@ p{
 .button-yes:hover {
   background: linear-gradient(180deg, #a7dbb2 0%, #92bfa1 100%)
 }
-
 
 .button-no{
   margin-left:20px;
@@ -143,10 +147,10 @@ a{
   background: linear-gradient(180deg, #a7dbb2 0%, #92bfa1 100%);
 }
 
+/* Diagram with all the words on the results page */
 .diagram{
   display: inline-block;
 }
-
 
 .diagram-column {
   display: block;
@@ -214,6 +218,8 @@ a{
   color: #666;
 }
 
+
+/* Intro text on the first page */
 .introtext{
   width: 500px;
   max-width: 90%;
@@ -234,6 +240,9 @@ a{
   font-weight: 800;
 }
 
+
+/* Some adjustments for smaller screens,
+mostly to make diagram fold into 2 rows of 3 columns */
 @media (max-width: 800px) {
   .diagram {
       margin: 0 auto;
@@ -254,4 +263,39 @@ a{
   .diagram-column {
       width: 30%;
   }
+}
+
+/* Tooltips with definitions in the diagram */
+.unknown div, .known div{
+	position: relative;
+}
+.unknown div:hover .diagram-tooltip,
+	.known div:hover .diagram-tooltip{
+	visibility: visible;
+}
+.diagram-tooltip{
+	display: block !important;
+	visibility: hidden;
+	width: 250px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 12px 20px;
+	position: absolute !important;
+	z-index: 1;
+	bottom: 25px;
+	left: -72%;
+	text-align: left;
+}
+
+.diagram-tooltip::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: black transparent transparent transparent;
 }
