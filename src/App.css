@@ -51,7 +51,17 @@ p{
 }
 
 .question-definition{
-  display:none;
+	display:block !important;
+	color: #444;
+	width:216px;
+	font-size:13px;
+	margin: 10px auto;
+	filter: blur(3px);
+    -webkit-filter: blur(3px);
+}
+.question-definition:hover{
+	filter: none;
+    -webkit-filter: none;
 }
 
 .level-letter{
