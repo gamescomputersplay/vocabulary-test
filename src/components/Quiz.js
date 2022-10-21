@@ -1,6 +1,6 @@
 import React from 'react';
 import Question from './Question'
-import {levels, useLocalData } from '../Consts'
+import {apiURL, localData, useLocalData, levels} from '../Consts'
 
 const wordCount = [ 500, 1000, 2500, 5000, 11000, 20000 ]
 const highest_level = levels.length-1
@@ -29,14 +29,12 @@ class Quiz extends React.Component {
     }
 
     componentDidMount() {
-
-      const apiURL = "http://how-many-words-do-you-know.com/vocabapi/v1/random_vocab.php"
       
       if (useLocalData) {
         this.setState( 
           { 
             wordsAreLoaded: true, 
-            wordsData: [[["bad", "adjective", "A1"], ["chicken", "noun", "A1"], ["test", "noun", "A1"], ["post office", "noun", "A1"], ["group", "noun", "A1"], ["great", "adjective", "A1"], ["line", "noun", "A1"], ["ticket", "noun", "A1"], ["feed", "verb", "A1"], ["photo", "noun", "A1"], ["ill", "adjective", "A1"], ["baby", "noun", "A1"]], [["illness", "noun", "A2"], ["sign in", "phrasal verb", "A2"], ["apple", "noun", "A2"], ["follow", "verb", "A2"], ["die", "verb", "A2"], ["job", "noun", "A2"], ["last name", "noun", "A2"], ["speed", "noun", "A2"], ["job", "noun", "A2"], ["cold", "adjective", "A2"], ["take", "verb", "A2"], ["university", "noun", "A2"]], [["funny", "adjective", "B1"], ["weak", "adjective", "B1"], ["wheelchair", "noun", "B1"], ["stone", "noun", "B1"], ["painful", "adjective", "B1"], ["risk", "noun", "B1"], ["secondary", "adjective", "B1"], ["possibility", "noun", "B1"], ["employer", "noun", "B1"], ["afterwards", "adverb", "B1"], ["employee", "noun", "B1"], ["industrial", "adjective", "B1"]], [["unequal", "adjective", "B2"], ["gadget", "noun", "B2"], ["segment", "noun", "B2"], ["skim", "verb", "B2"], ["sensory", "adjective", "B2"], ["weight", "noun", "B2"], ["ignorance", "noun", "B2"], ["copy in", "phrasal verb", "B2"], ["entertain", "verb", "B2"], ["straight", "adjective", "B2"], ["raft", "noun", "B2"], ["alert", "adjective", "B2"]], [["supersonic", "adjective", "C1"], ["thoughtless", "adjective", "C1"], ["glacial", "adjective", "C1"], ["miffed", "adjective", "C1"], ["unequally", "adverb", "C1"], ["disloyal", "adjective", "C1"], ["caricature", "verb", "C1"], ["defeatism", "noun", "C1"], ["bloated", "adjective", "C1"], ["cashew", "noun", "C1"], ["quintessential", "adjective", "C1"], ["shrewd", "adjective", "C1"]], [["fingermark", "noun", "C2"], ["bunt", "verb", "C2"], ["godawful", "adjective", "C2"], ["dress code", "noun", "C2"], ["blackshirt", "noun", "C2"], ["mizzen", "noun", "C2"], ["deserts", "noun", "C2"], ["forbearance", "noun", "C2"], ["thrive on", "phrasal verb", "C2"], ["skittishly", "adverb", "C2"], ["flinch from", "phrasal verb", "C2"], ["balloon tyre", "noun", "C2"]]]
+            wordsData: localData
           })
       } else {
         fetch(apiURL)
@@ -53,13 +51,14 @@ class Quiz extends React.Component {
         word={word[0]} 
         pos={word[1]} 
         level={word[2]} 
+        definition={word[3]} 
         number={this.state.questionCounter}
         onClick = { this.handleClick }
         />
     }
    
 
-    handleClick(known, word){
+    handleClick(known, word, definition){
   
       var newLevel = 0
       var newQuestion = 0
@@ -71,13 +70,15 @@ class Quiz extends React.Component {
       var newResult = this.state.result
       var newVocabSize = 0
   
+      var word_with_definition = {word: word, definition: definition}
+
       if (known) {
         newKnown[this.state.currentLevel] += 1
-        newKnownWords[this.state.currentLevel].push(word)
+        newKnownWords[this.state.currentLevel].push(word_with_definition)
       }
       else {
         newUnknown[this.state.currentLevel] += 1
-        newUnKnownWords[this.state.currentLevel].push(word)
+        newUnKnownWords[this.state.currentLevel].push(word_with_definition)
 
       }
   
@@ -141,7 +142,7 @@ class Quiz extends React.Component {
         result: newResult,
         vocabSize: newVocabSize
       })
-      // console.log(this.state.knownWords)
+      console.log(this.state.knownWords)
       // console.log(this.state.unknownWords)
 
         // Update State upstream
