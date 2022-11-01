@@ -34,10 +34,10 @@ class Quiz extends React.Component {
         this.setState( 
           { 
             wordsAreLoaded: true, 
-            wordsData: localData
+            wordsData: localData[this.props.language]
           })
       } else {
-        fetch(apiURL)
+        fetch(apiURL[this.props.language])
         .then( (response) => response.json() )
         .then( (data) => this.setState( { wordsAreLoaded: true, wordsData: data }) );
       }

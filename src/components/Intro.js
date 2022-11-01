@@ -18,7 +18,7 @@ class Intro extends Component {
 
                 <p>Test words are randomly chosen every time you take the test.</p>
 
-                <button className="button-start" onClick={() => this.props.clickStart()}>Start</button>
+                <button className="button-start" onClick={() => this.props.clickStart("en")}>Start</button>
             </div>
         )
     }
