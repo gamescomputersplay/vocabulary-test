@@ -57,7 +57,8 @@ class App extends React.Component {
       screen = <Result 
         result={this.state.result} 
         vocabSize={this.state.vocabSize} 
-        goAgain={this.startQuiz} 
+        goAgain={this.startQuiz}
+        language={this.state.language}
         knownWords={this.state.knownWords} 
         unknownWords={this.state.unknownWords} 
         />
