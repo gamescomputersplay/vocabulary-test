@@ -10,6 +10,10 @@ const localData = {
 }
 
 let useLocalData = true
+const wordCount = {
+    "en": [ 500, 1000, 2500, 5000, 11000, 20000 ],
+    "de": [ 500, 1000, 2500, 5000, 16000, 30000 ],
+}
 
 const levels = [ 'A1', 'A2', 'B1', 'B2', 'C1', 'C2' ]
 
@@ -20,4 +24,4 @@ if (document.location.href.includes("how-many-words-do-you-know.com")){
     useLocalData = false
 }
 
-export {apiURL, localData, useLocalData, levels}
+export {apiURL, localData, useLocalData, wordCount, levels}

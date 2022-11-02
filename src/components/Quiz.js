@@ -1,8 +1,8 @@
 import React from 'react';
 import Question from './Question'
-import {apiURL, localData, useLocalData, levels} from '../Consts'
+import {apiURL, localData, useLocalData, wordCount, levels} from '../Consts'
 
-const wordCount = [ 500, 1000, 2500, 5000, 11000, 20000 ]
+// const wordCount = [ 500, 1000, 2500, 5000, 11000, 20000 ]
 const highest_level = levels.length-1
 const min_words = [4, 5, 6, 8, 10, 12]
 
@@ -22,7 +22,8 @@ class Quiz extends React.Component {
           knownWords: [ [], [], [], [], [], [], [], [], [], [] ],
           unknownWords: [ [], [], [], [], [], [], [], [], [], [] ],
           result: -100, // No result
-          vocabSize: 0
+          vocabSize: 0,
+          wordCount: wordCount[this.props.language]
       };
       
       this.handleClick = this.handleClick.bind(this)
@@ -126,7 +127,7 @@ class Quiz extends React.Component {
         var thisLevelKnown = this.state.known[i]
         var thisLevelUnKnown = this.state.unknown[i]
         var thisLevelRatio = thisLevelKnown + thisLevelUnKnown === 0 ? 0 : thisLevelKnown / (thisLevelKnown + thisLevelUnKnown)
-        newVocabSize += thisLevelRatio * wordCount[i]
+        newVocabSize += thisLevelRatio * this.state.wordCount[i]
         newVocabSize = Math.ceil(newVocabSize / 100) * 100;
       }
 
