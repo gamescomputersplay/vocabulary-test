@@ -17,9 +17,10 @@ class Intro extends Component {
                 <p>At the end you get the estimation of your CEFR level and vocabulary size.</p>
 
                 <p>Test words are randomly chosen every time you take the test.</p>
-
-                <button className="button-start" onClick={() => this.props.clickStart("en")}>Start EN</button>
-                <button className="button-start" onClick={() => this.props.clickStart("de")}>Start DE</button>
+                <div className='start-buttons'>
+                    <button className="button-start" onClick={() => this.props.clickStart("en")}>EN</button>
+                    <button className="button-start" onClick={() => this.props.clickStart("de")}>DE</button>
+                </div>
             </div>
         )
     }
