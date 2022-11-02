@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
+import { ReactComponent as EnSVG } from '../img/gb.svg'
+import { ReactComponent as DeSVG } from '../img/de.svg'
 
+const flagWid = 24
+const flagHgt = 18
 class Intro extends Component {
 
     
@@ -12,14 +16,21 @@ class Intro extends Component {
 
                 <p>This is how it works: go through a series of flashcards and indicate if you <span className="green">know this word (green tick)</span> or <span className="red">don’t (red cross)</span>.</p>
                     
-                <p>The test starts with the most basic words and will automatically increase the difficulty if you easily go through the simple parts.</p>
+                <p>The test starts with the most basic words and will automatically increase the difficulty if you easily go through the simple parts.
+                <br/><b>Words are randomly chosen every time you take the test (no two tests are the same).</b></p>
 
-                <p>At the end you get the estimation of your CEFR level and vocabulary size.</p>
+                <p>Pick the language to start.</p>
 
-                <p>Test words are randomly chosen every time you take the test.</p>
+                
                 <div className='start-buttons'>
-                    <button className="button-start" onClick={() => this.props.clickStart("en")}>EN</button>
-                    <button className="button-start" onClick={() => this.props.clickStart("de")}>DE</button>
+                    <button className="button-start" onClick={() => this.props.clickStart("en")}>
+                        <EnSVG width={flagWid} height={flagHgt} fill="#016617" />
+                        <span><b>EN</b></span>
+                    </button>
+                    <button className="button-start" onClick={() => this.props.clickStart("de")}>
+                        <DeSVG width={flagWid} height={flagHgt} fill="#016617" />
+                        <span><b>DE</b></span>
+                    </button>
                 </div>
             </div>
         )
