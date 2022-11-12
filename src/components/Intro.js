@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { ReactComponent as EnSVG } from '../img/gb.svg'
 import { ReactComponent as DeSVG } from '../img/de.svg'
+import { ReactComponent as FrSVG } from '../img/fr.svg'
 
 const flagWid = 24
 const flagHgt = 18
@@ -30,6 +31,10 @@ class Intro extends Component {
                     <button className="button-start" onClick={() => this.props.clickStart("de")}>
                         <DeSVG width={flagWid} height={flagHgt} fill="#016617" />
                         <span><b>DE</b></span>
+                    </button>
+                    <button className="button-start" onClick={() => this.props.clickStart("fr")}>
+                        <FrSVG width={flagWid} height={flagHgt} fill="#016617" />
+                        <span><b>FR</b></span>
                     </button>
                 </div>
             </div>
