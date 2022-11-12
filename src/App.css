@@ -135,7 +135,7 @@ a{
   color: #7619a1;
 }
 
-.button-again, .button-start{
+.button-again{
   margin: 20px auto 10px;
   font-size: 20px;
   border: 0px;
@@ -147,6 +147,17 @@ a{
   background: linear-gradient(180deg, #a7dbb2 0%, #92bfa1 100%);
 }
 
+.button-start{
+  background: linear-gradient(180deg, #b7ebc2 0%, #a2cfb1 100%);
+  border: 0px;
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 10px 10px;
+}
+.button-start svg{
+  vertical-align:middle;
+  padding-right: 10px;
+}
 /* Diagram with all the words on the results page */
 .diagram{
   display: inline-block;

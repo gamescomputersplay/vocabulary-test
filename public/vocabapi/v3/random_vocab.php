@@ -3,7 +3,17 @@
 
 $start_time = microtime(true);
 
-$filename = "wordsdata2.txt";
+$filename = "wordsdata_en.txt";
+
+if (array_key_exists("lang", $_GET)){
+	if ($_GET["lang"]=="de") {
+		$filename = "wordsdata_de.txt";
+	}
+	if ($_GET["lang"]=="fr") {
+		$filename = "wordsdata_fr.txt";
+	}
+}
+
 $words = Array();
 $levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
 $per_level = 12;
@@ -17,6 +27,7 @@ function load_words() {
 
 	while (!feof($file_handle) ) {
 		$line_of_text = fgets($file_handle);
+
 		$parts = explode('	', $line_of_text);
 		if (count($parts) == 4) {
 			$words_array = Array($parts[0], $parts[1], trim($parts[2]), trim($parts[3]));

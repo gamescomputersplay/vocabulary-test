@@ -43,7 +43,7 @@ class Result extends Component {
     render() {
         var button = null
         if (this.state.showButton) {
-            button = <button className="button-again" onClick={() => this.props.goAgain()}>Take the test again</button>
+            button = <button className="button-again" onClick={() => this.props.goAgain(this.props.language)}>Take the test again</button>
         }
 
         return (

@@ -34,8 +34,9 @@ class App extends React.Component {
       })
   }
   
-  startQuiz(){
+  startQuiz(lang){
     this.setState ({ 
+      language: lang,
       screen: "quiz",
       result: -100
       })   
@@ -48,13 +49,16 @@ class App extends React.Component {
       screen = <Intro clickStart={this.startQuiz} />
     }
     if (this.state.screen === "quiz") {
-      screen = <Quiz setResult={this.setResult}/>
+      screen = <Quiz setResult={this.setResult}
+        language={this.state.language}
+        />
     }
     if (this.state.screen === "result") {
       screen = <Result 
         result={this.state.result} 
         vocabSize={this.state.vocabSize} 
-        goAgain={this.startQuiz} 
+        goAgain={this.startQuiz}
+        language={this.state.language}
         knownWords={this.state.knownWords} 
         unknownWords={this.state.unknownWords} 
         />
