@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Diagram from './Diagram'
-import {levels} from '../Consts'
+import {langName, levels} from '../Consts'
 
 import ReactGA from "react-ga4";
 
@@ -48,7 +48,7 @@ class Result extends Component {
 
         return (
             <div>
-                <h2 class="cefr">Your vocabulary level is {this.levelMessage(this.props.result)}</h2>
+                <h2 class="cefr">Your vocabulary level in {langName[this.props.language]} is {this.levelMessage(this.props.result)}</h2>
                 <p class="cefrlink">You can read more about CEFR levels <a href="https://en.wikipedia.org/wiki/Common_European_Framework_of_Reference_for_Languages">here</a>.</p>
                 <h2>You know approximately {this.props.vocabSize} words</h2>
                 <Diagram known={this.props.knownWords} unknown={this.props.unknownWords} />
