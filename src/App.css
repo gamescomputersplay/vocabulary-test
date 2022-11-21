@@ -306,3 +306,5 @@ mostly to make diagram fold into 2 rows of 3 columns */
 	border-style: solid;
 	border-color: black transparent transparent transparent;
 }
+
+.social-buttons button svg {vertical-align: bottom;}
