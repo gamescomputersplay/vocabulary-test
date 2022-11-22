@@ -3,6 +3,7 @@ import { ReactComponent as EnSVG } from '../img/gb.svg'
 import { ReactComponent as DeSVG } from '../img/de.svg'
 import { ReactComponent as FrSVG } from '../img/fr.svg'
 import { ReactComponent as CnSVG } from '../img/cn.svg'
+import { ReactComponent as EsSVG } from '../img/es.svg'
 
 const flagWid = 24
 const flagHgt = 18
@@ -21,7 +22,9 @@ class Intro extends Component {
                 <p>The test starts with the most basic words and will automatically increase the difficulty if you easily go through the simple parts.
                 <br/><b>Words are randomly chosen every time you take the test (no two tests are the same).</b></p>
 
-                <p>Pick the language to start.</p>
+                <p>Test can measure your knowledge in a number of languages: <b>English, French, German, Spanish, Chinese.</b></p>
+                
+                <p>Pick the language you would like to test.</p>
 
                 
                 <div className='start-buttons'>
@@ -37,10 +40,15 @@ class Intro extends Component {
                         <FrSVG width={flagWid} height={flagHgt} fill="#016617" />
                         <span><b>FR</b></span>
                     </button>
+                    <button className="button-start" onClick={() => this.props.clickStart("es")}>
+                        <EsSVG width={flagWid} height={flagHgt} fill="#016617" />
+                        <span><b>ES</b></span>
+                    </button>
                     <button className="button-start" onClick={() => this.props.clickStart("cn")}>
                         <CnSVG width={flagWid} height={flagHgt} fill="#016617" />
                         <span><b>CN</b></span>
                     </button>
+
                 </div>
             </div>
         )
