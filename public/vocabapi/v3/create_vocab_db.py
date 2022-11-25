@@ -51,7 +51,8 @@ def create_tables(conn, languages):
             word text NOT NULL,
             pos text NOT NULL,
             level text NOT NULL,
-            translation text NOT NULL
+            translation text NOT NULL,
+            nn integer NOT NULL
             );''')
 
         cur.execute(f"CREATE INDEX index_{language} ON words_{language} (level)")
@@ -77,9 +78,9 @@ def insert_words(conn, languages):
 
     for language in languages:
 
-        sql = f''' INSERT INTO words_{language} 
-                   (word, pos, level, translation)
-                   VALUES(?, ?, ?, ?) '''
+        sql = f''' INSERT INTO words_{language}
+                   (word, pos, level, translation, nn)
+                   VALUES(?, ?, ?, ?, ?) '''
 
         file = f"wordsdata_{language}.txt"
 
@@ -87,12 +88,16 @@ def insert_words(conn, languages):
 
         with open(file, "r", encoding="utf-8") as fs:
 
-            for line in fs:
-                word, pos, level, translation = line.strip().split("\t")
-                word_data = (word, pos, level, translation)
+            indeces = {"A1":0, "A2":0, "B1":0, "B2":0, "C1":0, "C2":0}
 
+            for line in fs:
+
+                word, pos, level, translation = line.strip().split("\t")
+                nn = indeces[level]
+                word_data = (word, pos, level, translation, nn)
+                indeces[level] += 1
                 cur.execute(sql, word_data)
-                
+
     conn.commit()
 
 def get_word_count(conn, languages):
