@@ -8,7 +8,7 @@ $database_name = "vocabulary.db";
 // Get the language from GET, "en" by default
 $language = "en";
 if (array_key_exists("lang", $_GET) && strlen($_GET["lang"]) == 2){
-	$language = strlen($_GET["lang"]);
+	$language = $_GET["lang"];
 }
 
 // Connect to the DB
