@@ -151,7 +151,7 @@ a{
   background: linear-gradient(180deg, #b7ebc2 0%, #a2cfb1 100%);
   border: 0px;
   display: inline-block;
-  margin: 20px 10px;
+  margin: 20px 10px 0;
   padding: 10px 10px;
 }
 .button-start svg{

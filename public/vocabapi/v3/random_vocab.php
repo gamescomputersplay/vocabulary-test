@@ -18,6 +18,9 @@ if (array_key_exists("lang", $_GET)){
 	if ($_GET["lang"]=="es") {
 		$filename = "wordsdata_es.txt";
 	}
+	if ($_GET["lang"]=="it") {
+		$filename = "wordsdata_it.txt";
+	}
 }
 
 $words = Array();

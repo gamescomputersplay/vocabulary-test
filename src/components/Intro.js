@@ -4,6 +4,7 @@ import { ReactComponent as DeSVG } from '../img/de.svg'
 import { ReactComponent as FrSVG } from '../img/fr.svg'
 import { ReactComponent as CnSVG } from '../img/cn.svg'
 import { ReactComponent as EsSVG } from '../img/es.svg'
+import { ReactComponent as ItSVG } from '../img/it.svg'
 
 const flagWid = 24
 const flagHgt = 18
@@ -43,6 +44,10 @@ class Intro extends Component {
                     <button className="button-start" onClick={() => this.props.clickStart("es")}>
                         <EsSVG width={flagWid} height={flagHgt} fill="#016617" />
                         <span><b>ES</b></span>
+                    </button>
+                    <button className="button-start" onClick={() => this.props.clickStart("it")}>
+                        <ItSVG width={flagWid} height={flagHgt} fill="#016617" />
+                        <span><b>IT</b></span>
                     </button>
                     <button className="button-start" onClick={() => this.props.clickStart("cn")}>
                         <CnSVG width={flagWid} height={flagHgt} fill="#016617" />
