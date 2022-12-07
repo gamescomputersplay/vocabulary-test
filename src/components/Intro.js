@@ -5,6 +5,8 @@ import { ReactComponent as FrSVG } from '../img/fr.svg'
 import { ReactComponent as CnSVG } from '../img/cn.svg'
 import { ReactComponent as EsSVG } from '../img/es.svg'
 import { ReactComponent as ItSVG } from '../img/it.svg'
+import { ReactComponent as PtSVG } from '../img/pt.svg'
+import { ReactComponent as JpSVG } from '../img/jp.svg'
 
 const flagWid = 24
 const flagHgt = 18
@@ -23,7 +25,7 @@ class Intro extends Component {
                 <p>The test starts with the most basic words and will automatically increase the difficulty if you easily go through the simple parts.
                 <br/><b>Words are randomly chosen every time you take the test (no two tests are the same).</b></p>
 
-                <p>Test can measure your knowledge in a number of languages: <b>English, French, German, Spanish, Chinese.</b></p>
+                <p>Test can measure your knowledge in a number of languages: <b>English, French, German, Spanish, Italian, Portuguese, Chinese, Japanese.</b></p>
                 
                 <p>Pick the language you would like to test.</p>
 
@@ -49,9 +51,17 @@ class Intro extends Component {
                         <ItSVG width={flagWid} height={flagHgt} fill="#016617" />
                         <span><b>IT</b></span>
                     </button>
+                    <button className="button-start" onClick={() => this.props.clickStart("pt")}>
+                        <PtSVG width={flagWid} height={flagHgt} fill="#016617" />
+                        <span><b>PT</b></span>
+                    </button>
                     <button className="button-start" onClick={() => this.props.clickStart("cn")}>
                         <CnSVG width={flagWid} height={flagHgt} fill="#016617" />
                         <span><b>CN</b></span>
+                    </button>
+                    <button className="button-start" onClick={() => this.props.clickStart("jp")}>
+                        <JpSVG width={flagWid} height={flagHgt} fill="#016617" />
+                        <span><b>JP</b></span>
                     </button>
 
                 </div>
