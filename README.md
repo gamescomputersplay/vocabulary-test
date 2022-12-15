@@ -40,13 +40,18 @@ English dictionaries have a by far better alignment with CEFR than any other lan
 
 German has some good CEFR aligned word lists (including one from Goethe institute) - however most of them are aligned with particular study coursebooks and do not go beyond B2. A combination of a few lists such lists + other frequency lists + one of the online dictionaries for translation were used.
 
-### French
 
-This one was tough. First, I don't speak French. Second, I wasn't able tp find any good CEFR-align vocabulary lists for French. I ended up using french wikitionary as a base, with a few frequency list to rank then, then just cut into an appropriate size CEFR level.
+### French, Spanish, Italian and Portuguese
+
+These were a little difficult. Cervantes Institute did some good job providing a list of things a Spanish speaker is expected to know at each level, but for the rest - I wasn't able tp find any good CEFR-align vocabulary lists for any of these languages. I ended up combining a few dictionaries, ranking the words by a frequency list and then just cutting the result into chunks of appropriate size for each CEFR level.
 
 ### Chinese
 
-Chinese language exam HSK has a perfect vocabulary list that I used without any modifications. Only concern is, HSK's 6 levels are not **really** correspond to CEFR. I am HSK4 and I am nowhere as confident as B2. Also it is only about 5.000 words in total. But I will ignore all this for this test.
+Chinese language exam HSK has a perfect vocabulary list that I used without any modifications. Only concern is, HSK's 6 levels are not **really** correspond to CEFR. I am HSK4 and I am nowhere as confident as B2. Also it is only about 5.000 words in total.
+
+### Japanese
+
+For the Japanese I found a list of words for Japanese language exam JLPT. It looked somewhat similar to Chinese HSK, so I just went ahead and used it whole. I assume that should work fine, but I have no way to tell - I can't speak a word of it.
 
 ## Technical implementation
 
