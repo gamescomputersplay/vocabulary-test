@@ -87,6 +87,16 @@ p{
 .letter-C1{ color: #b8dfee;; }
 .letter-C2{ color: #e6c7f5; }
 
+/* But on Diagram page make the BG colorful*/
+.diagram-column .letter-A1,
+.diagram-column .letter-A2,
+.diagram-column .letter-B1,
+.diagram-column .letter-B2,
+.diagram-column .letter-C1,
+.diagram-column .letter-C2  {
+	color: #fff;
+}
+
 .question-button{
   margin: 20px auto 10px;
   font-size: 20px;
@@ -158,6 +168,7 @@ a{
   vertical-align:middle;
   padding-right: 10px;
 }
+
 /* Diagram with all the words on the results page */
 .diagram{
   display: inline-block;
@@ -172,7 +183,7 @@ a{
   margin: 5px;
   padding: 0px;
   width: 120px;
-  height: 350px;
+  height: 100%;
 }
 
 .diagram-bg-A1 { background:  rgb(243, 215, 208);}
@@ -190,21 +201,41 @@ a{
   font-family: 'Dosis', sans-serif;
   font-weight: 800;
   background: #fff;
+  border-bottom: 1px solid #eee;
 }
+
+.level-A1 .diagram-level {
+	background: #f3d7d0;
+	}
+.level-A2 .diagram-level {
+	background: #f8ddc6;
+	}
+.level-B1 .diagram-level {
+	background: #f7eaca;
+	}
+.level-B2 .diagram-level {
+	background: #c5f0eb;
+	}
+.level-C1 .diagram-level {
+	background: #b8dfee;
+	}
+.level-C2 .diagram-level {
+	background: #e6c7f5;
+	}
+
 
 .diagram-column p {
   margin: 0px;
-  padding:1px;
+  padding: 3px;
+  word-wrap: break-word;
 }
 .diagram-column .unknown {
   color: #a82e0f;
   background: #fff;
-  padding-bottom: 4px;
 }
 
 .diagram-column .known {
-  color: #20b351;
-  padding-top: 4px;
+  color: #454;
 }
 
 
@@ -214,6 +245,29 @@ a{
 .level-B2{  border-bottom-color: rgb(100, 170, 162);}
 .level-C1{  border-bottom-color: #4d94b1;}
 .level-C2{  border-bottom-color: #a369be;}
+
+/* Zebra in the diagram */
+.unknown .diagram-word:nth-child(even){
+	background: #f8f8f8;
+}
+.level-A1 .known .diagram-word:nth-child(even){
+	background: #eacfc8;
+}
+.level-A2 .known .diagram-word:nth-child(even){
+	background: #ecd2bb;
+}
+.level-B1 .known .diagram-word:nth-child(even){
+	background: #ebdfbf;
+}
+.level-B2 .known .diagram-word:nth-child(even){
+	background: #bae5e0;
+}
+.level-C1 .known .diagram-word:nth-child(even){
+	background: #add4e3;
+}
+.level-C2 .known .diagram-word:nth-child(even){
+	background: #dbbce9;
+}
 
 .cefr{
   margin-bottom: 4px;
