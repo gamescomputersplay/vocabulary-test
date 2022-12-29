@@ -27,6 +27,12 @@ if (array_key_exists("lang", $_GET)){
 	if ($_GET["lang"]=="jp") {
 		$filename = "wordsdata_jp.txt";
 	}
+	if ($_GET["lang"]=="ru") {
+		$filename = "wordsdata_ru.txt";
+	}
+	if ($_GET["lang"]=="ar") {
+		$filename = "wordsdata_ar.txt";
+	}
 }
 
 $words = Array();
