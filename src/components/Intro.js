@@ -14,6 +14,17 @@ const flagWid = 24
 const flagHgt = 18
 class Intro extends Component {
 
+  componentDidMount() {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang");
+
+    // List of supported languages
+    const supportedLangs = ["en", "de", "fr", "es", "it", "pt", "cn", "jp", "ru", "ar"];
+
+    if (supportedLangs.includes(lang)) {
+      this.props.clickStart(lang);
+        }
+    }
     
     render() {
         return (
