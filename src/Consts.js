@@ -12,16 +12,16 @@ const langName = {
     }
 
 const apiURL = {
-    "en": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php",
-    "de": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=de",
-    "fr": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=fr",
-    "cn": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=cn",
-    "es": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=es",
-    "it": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=it",
-    "pt": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=pt",
-    "jp": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=jp",
-    "ru": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=ru",
-    "ar": "http://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=ar"
+    "en": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php",
+    "de": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=de",
+    "fr": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=fr",
+    "cn": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=cn",
+    "es": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=es",
+    "it": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=it",
+    "pt": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=pt",
+    "jp": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=jp",
+    "ru": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=ru",
+    "ar": "https://how-many-words-do-you-know.com/vocabapi/v3/random_vocab.php?lang=ar"
     }
 
 // local version of v2 API
